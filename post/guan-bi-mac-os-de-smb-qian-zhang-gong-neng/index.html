@@ -2,7 +2,7 @@
 <html lang="zh-CN">
  <head>
      <meta charset="utf-8" />
-  <title>Jellyfin下载地址 | Garfield鱼</title>
+  <title>关闭Mac OS 的SMB签章功能 | Garfield鱼</title>
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
   <link rel="stylesheet" href="https://garfieldyu.github.io/styles/main.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
@@ -77,11 +77,17 @@
      <div class="post-page">
       <div class="post animated fadeInDown">
        <div class="post-title">
-        <h3><a>Jellyfin下载地址</a></h3>
+        <h3><a>关闭Mac OS 的SMB签章功能</a></h3>
        </div>
        <div class="post-content">
-        <p>https://repo.jellyfin.org/releases/</p>
-<!-- more -->
+        <p>由于Mac OS 10.11.5（以及之后版本）默认会开启SMB签章功能，虽然此设定能提高文件传输的安全性，却会耗费不少时间与资源。若您想要关闭Mac装置的SMB签章功能，请依循下列步骤：：</p>
+<p>开启Mac的［终端机］服务。<br>
+输入以下指令：sudo touch /etc/nsmb.conf，然后输入您Mac装置的密码。<br>
+输入以下两道指令：sudo bash -c 'echo &quot;[default]&quot; &gt;&gt; /etc/nsmb.conf' 以及sudo bash -c 'echo &quot;signing_required=no&quot; &gt;&gt; /etc/nsmb.conf'<br>
+若您在关闭SMB签章后想要重启此功能，请依循下列步骤：</p>
+<p>开启Mac的［终端机］服务。<br>
+输入以下指令：sudo rm /etc/nsmb.conf<br>
+请注意：关闭SMB签章虽然会提升文件传输效能，但亦会降低其安全性。</p>
 
        </div>
        <div class="post-footer">
@@ -90,12 +96,6 @@
           <i class="fa fa-sun-o"></i>
           <span class="date">2021-06-05</span>
           <i class="fa fa-tag"></i>
-          
-          <a class="tag" href="https://garfieldyu.github.io/tag/oH_QYuIAv/" title="Jellyfin">Jellyfin </a>
-          
-          <a class="tag" href="https://garfieldyu.github.io/tag/UtUgriefZN/" title="NQAP">NQAP </a>
-          
-          <a class="tag" href="https://garfieldyu.github.io/tag/rWxVp8O-Nv/" title="NAS">NAS </a>
           
          </div>
         </div>
@@ -109,16 +109,14 @@
         <a class="fa fa-weibo" href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));"></a>
        </div>
        <div class="twitter">
-        <a class="fa fa-twitter" href="http://twitter.com/home?status=,https://garfieldyu.github.io/post/jellyfin-xia-zai-di-zhi/,;"></a>
+        <a class="fa fa-twitter" href="http://twitter.com/home?status=,https://garfieldyu.github.io/post/guan-bi-mac-os-de-smb-qian-zhang-gong-neng/,;"></a>
        </div>
       </div>
       <div class="pagination">
        <ul class="clearfix">
 
-        <li class="pre pagbuttons"><a class="btn" role="navigation" href="https://garfieldyu.github.io/post/guan-bi-mac-os-de-smb-qian-zhang-gong-neng/" title="关闭Mac OS 的SMB签章功能">上一篇</a></li>
-         
         
-        <li class="next pagbuttons"><a class="btn" role="navigation" href="https://garfieldyu.github.io/post/garfieldyu/" title=" Garfieldyu">下一篇</a></li>
+        <li class="next pagbuttons"><a class="btn" role="navigation" href="https://garfieldyu.github.io/post/jellyfin-xia-zai-di-zhi/" title=" Jellyfin下载地址">下一篇</a></li>
         
        </ul>
       </div>

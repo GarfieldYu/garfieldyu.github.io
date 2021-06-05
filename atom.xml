@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://garfieldyu.github.io</id>
     <title>Garfield鱼</title>
-    <updated>2021-06-05T04:34:10.121Z</updated>
+    <updated>2021-06-05T05:15:08.657Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://garfieldyu.github.io"/>
     <link rel="self" href="https://garfieldyu.github.io/atom.xml"/>
@@ -10,6 +10,22 @@
     <logo>https://garfieldyu.github.io/images/avatar.png</logo>
     <icon>https://garfieldyu.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Garfield鱼</rights>
+    <entry>
+        <title type="html"><![CDATA[关闭Mac OS 的SMB签章功能]]></title>
+        <id>https://garfieldyu.github.io/post/guan-bi-mac-os-de-smb-qian-zhang-gong-neng/</id>
+        <link href="https://garfieldyu.github.io/post/guan-bi-mac-os-de-smb-qian-zhang-gong-neng/">
+        </link>
+        <updated>2021-06-05T05:14:34.000Z</updated>
+        <content type="html"><![CDATA[<p>由于Mac OS 10.11.5（以及之后版本）默认会开启SMB签章功能，虽然此设定能提高文件传输的安全性，却会耗费不少时间与资源。若您想要关闭Mac装置的SMB签章功能，请依循下列步骤：：</p>
+<p>开启Mac的［终端机］服务。<br>
+输入以下指令：sudo touch /etc/nsmb.conf，然后输入您Mac装置的密码。<br>
+输入以下两道指令：sudo bash -c 'echo &quot;[default]&quot; &gt;&gt; /etc/nsmb.conf' 以及sudo bash -c 'echo &quot;signing_required=no&quot; &gt;&gt; /etc/nsmb.conf'<br>
+若您在关闭SMB签章后想要重启此功能，请依循下列步骤：</p>
+<p>开启Mac的［终端机］服务。<br>
+输入以下指令：sudo rm /etc/nsmb.conf<br>
+请注意：关闭SMB签章虽然会提升文件传输效能，但亦会降低其安全性。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Jellyfin下载地址]]></title>
         <id>https://garfieldyu.github.io/post/jellyfin-xia-zai-di-zhi/</id>
